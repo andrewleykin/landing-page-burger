@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Главная страница</title>
+    <title>Мистер Бургер</title>
     <meta http-equiv="X-UA-Compatible" content="IE = edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
@@ -11,9 +11,245 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
     <body>
       <div class="wrapper">
+        <!-- Cекция header-->
+        <header class="header section">
+          <div class="container">
+            <div class="header__wrap">
+              <div class="header__top">
+                <div class="header__logo"><img src="app/img/general/logo.png" alt="Мистер Бургер"></div>
+                <div class="header__nav">
+                  <nav class="nav">
+                    <ul class="nav__list">
+                      <li class="nav__item"><a class="nav__link" href="#about">О Нас</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#burger">Бургеры</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#team">Команда</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#menu">Меню</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#footer">Конакты</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="header__order">
+                  <button class="btn">Заказать</button>
+                </div>
+              </div>
+              <div class="header__middle">
+                <div class="header__burger"><img src="app/img/content/header/header__burger.png" alt="Бургер"></div>
+                <div class="header__text">
+                  <h2 class="title header__title">Мы делаем</h2><span class="header__subtitle">натуральные бургеры</span>
+                </div>
+              </div>
+              <div class="header__bottom">
+                <div class="header__arrow">
+                  <svg class="icon icon-arrow-scroll ">
+                    <use xlink:href="/app/img/svg/symbol/sprite.svg#arrow-scroll"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- Cекция about-->
+        <section class="section about" id="about">
+          <div class="container">
+            <div class="wrap">
+              <h2 class="title about__title">Мы лучшие</h2>
+              <div class="about__list">
+                <div class="about__item">
+                  <div class="about__icon">
+                    <svg class="icon icon-meat ">
+                      <use xlink:href="/app/img/svg/symbol/sprite.svg#meat"></use>
+                    </svg>
+                  </div><span class="about__name">100% свежее мясо</span>
+                  <p class="about__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+                </div>
+                <div class="about__item">
+                  <div class="about__icon">
+                    <svg class="icon icon-hand ">
+                      <use xlink:href="/app/img/svg/symbol/sprite.svg#hand"></use>
+                    </svg>
+                  </div><span class="about__name">Ручная  сборка</span>
+                  <p class="about__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+                </div>
+                <div class="about__item">
+                  <div class="about__icon">
+                    <svg class="icon icon-natural ">
+                      <use xlink:href="/app/img/svg/symbol/sprite.svg#natural"></use>
+                    </svg>
+                  </div><span class="about__name">Натуральные ингредиенты</span>
+                  <p class="about__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Cекция burger-->
+        <section class="section burger" id="burger">
+          <div class="container">
+            <div class="wrap">
+              <div class="burger__list">
+                <div class="burger__item">
+                  <div class="burger__wrap">
+                    <div class="burger__left">
+                      <div class="burger__descr descr">
+                        <svg class="icon icon-burger ">
+                          <use xlink:href="/app/img/svg/symbol/sprite.svg#burger"></use>
+                        </svg><span class="descr__text">состав</span>
+                        <div class="burger__composition composition">
+                          <div class="composition__list">
+                            <div class="composition__item">
+                              <svg class="icon icon-beef ">
+                                <use xlink:href="/app/img/svg/symbol/sprite.svg#beef"></use>
+                              </svg><span class="composition__name">Говядина</span><span class="composition__mass">300 г</span>
+                            </div>
+                            <div class="composition__item">
+                              <svg class="icon icon-buns ">
+                                <use xlink:href="/app/img/svg/symbol/sprite.svg#buns"></use>
+                              </svg><span class="composition__name">Булочки</span><span class="composition__mass">100 г</span>
+                            </div>
+                            <div class="composition__item">
+                              <svg class="icon icon-salad ">
+                                <use xlink:href="/app/img/svg/symbol/sprite.svg#salad"></use>
+                              </svg><span class="composition__name">Зелень</span><span class="composition__mass">70 г</span>
+                            </div>
+                            <div class="composition__item">
+                              <svg class="icon icon-sauce ">
+                                <use xlink:href="/app/img/svg/symbol/sprite.svg#sauce"></use>
+                              </svg><span class="composition__name">Соус</span><span class="composition__mass">150 г</span>
+                            </div>
+                            <div class="composition__item">
+                              <svg class="icon icon-cucumber ">
+                                <use xlink:href="/app/img/svg/symbol/sprite.svg#cucumber"></use>
+                              </svg><span class="composition__name">Овощи</span><span class="composition__mass">200 г</span>
+                            </div>
+                            <div class="composition__item">
+                              <svg class="icon icon-cheese ">
+                                <use xlink:href="/app/img/svg/symbol/sprite.svg#cheese"></use>
+                              </svg><span class="composition__name">Сыр</span><span class="composition__mass">80 г</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div><img class="burger__img" src="app/img/content/burger/burger__1.png" alt="Dark BEEF Burger">
+                      <div class="burger__kkal kkal">
+                        <svg class="icon icon-kkal ">
+                          <use xlink:href="/app/img/svg/symbol/sprite.svg#kkal"></use>
+                        </svg><span class="kkal__num">1200</span><span class="kkal__text">ккал</span>
+                      </div>
+                    </div>
+                    <div class="burger__right">
+                      <h2 class="title burger__title">Dark BEEF Burger</h2>
+                      <p class="burger__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                      <div class="burger__order"><span class="burger__cost">500</span><span class="burger__valuta">рублей</span>
+                        <button class="btn">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="burger__item">
+                  <div class="burger__wrap">
+                    <div class="burger__left">
+                      <div class="burger__descr descr">
+                        <svg class="icon icon-burger ">
+                          <use xlink:href="/app/img/svg/symbol/sprite.svg#burger"></use>
+                        </svg><span class="descr__text">состав</span>
+                        <div class="burger__composition composition">
+                          <div class="composition__list">
+                            <div class="composition__item">
+                              <svg class="icon icon-beef ">
+                                <use xlink:href="/app/img/svg/symbol/sprite.svg#beef"></use>
+                              </svg><span class="composition__name">Говядина</span><span class="composition__mass">350 г</span>
+                            </div>
+                            <div class="composition__item">
+                              <svg class="icon icon-buns ">
+                                <use xlink:href="/app/img/svg/symbol/sprite.svg#buns"></use>
+                              </svg><span class="composition__name">Булочки</span><span class="composition__mass">120 г</span>
+                            </div>
+                            <div class="composition__item">
+                              <svg class="icon icon-sauce ">
+                                <use xlink:href="/app/img/svg/symbol/sprite.svg#sauce"></use>
+                              </svg><span class="composition__name">Соус</span><span class="composition__mass">110 г</span>
+                            </div>
+                            <div class="composition__item">
+                              <svg class="icon icon-cucumber ">
+                                <use xlink:href="/app/img/svg/symbol/sprite.svg#cucumber"></use>
+                              </svg><span class="composition__name">Овощи</span><span class="composition__mass">150 г</span>
+                            </div>
+                            <div class="composition__item">
+                              <svg class="icon icon-cheese ">
+                                <use xlink:href="/app/img/svg/symbol/sprite.svg#cheese"></use>
+                              </svg><span class="composition__name">Сыр</span><span class="composition__mass">100 г</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div><img class="burger__img" src="app/img/content/burger/burger__2.png" alt="Burger Sandwich">
+                      <div class="burger__kkal kkal">
+                        <svg class="icon icon-kkal ">
+                          <use xlink:href="/app/img/svg/symbol/sprite.svg#kkal"></use>
+                        </svg><span class="kkal__num">1000</span><span class="kkal__text">ккал</span>
+                      </div>
+                    </div>
+                    <div class="burger__right">
+                      <h2 class="title burger__title">Burger Sandwich</h2>
+                      <p class="burger__text">Описание для второго бургера, проверка слайдера и так далее</p>
+                      <div class="burger__order"><span class="burger__cost">400</span><span class="burger__valuta">рублей</span>
+                        <button class="btn">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Cекция team-->
+        <section class="section team" id="team">
+          <div class="container">
+            <div class="team__block">
+              <h2 class="title team__title">Команда</h2>
+              <div class="team__list">
+                <div class="team__item"><span class="team__name">Антон Пренкулов</span>
+                  <div class="team__info">
+                    <div class="team__photo"><img src="app/img/content/team/team__1.jpg" alt="Антон Пренкулов"></div>
+                    <div class="team__descr"><span class="team__post">Директор</span>
+                      <p class="tema__text">Самый главный тут чувак, лучше всех всё знает.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item"><span class="team__name">Ричард джеймс</span>
+                  <div class="team__info">
+                    <div class="team__photo"><img src="app/img/content/team/team__2.jpg" alt="Ричард джеймс"></div>
+                    <div class="team__descr"><span class="team__post">Оператор</span>
+                      <p class="tema__text">С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item"><span class="team__name">Джейк финн</span>
+                  <div class="team__info">
+                    <div class="team__photo"><img src="app/img/content/team/team__3.jpg" alt="Джейк финн"></div>
+                    <div class="team__descr"><span class="team__post">Курьер</span>
+                      <p class="tema__text">Расскажет анекдот, когда к вам придёт. И принесёт вам сочный бургер.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item"><span class="team__name">Николай иванов</span>
+                  <div class="team__info">
+                    <div class="team__photo"><img src="app/img/content/team/team__4.jpg" alt="Николай иванов"></div>
+                    <div class="team__descr"><span class="team__post">Повар</span>
+                      <p class="tema__text">Приготовит самые отменные булочки в стране.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Cекция menu-->
+        <!-- Cекция reviews-->
+        <!-- Cекция order-->
+        <!-- Cекция footer-->
       </div>
       <script src="app/js/libs.min.js"></script>
-      <script src="app/js/main.js"></script>
+      <script src="app/js/app.js"></script>
     </body>
   </head>
 </html>

@@ -1,7 +1,28 @@
 {
-  "navPages": {
-    "Главная страница" : "main.html",
-    "О компании" : "about.html",
-    "Каталог" : "catalog.html"
-  }
+  "mainNav": [
+  	{
+  		"text": "О Нас",
+  		"link": "#about"
+  	},
+  	{
+  		"text": "Бургеры",
+  		"link": "#burger"
+  	},
+  	{
+  		"text": "Команда",
+  		"link": "#team"
+  	},
+  	{
+  		"text": "Меню",
+  		"link": "#menu"
+  	},
+  	{
+  		"text": "Отзывы",
+  		"link": "#reviews"
+  	},
+  	{
+  		"text": "Конакты",
+  		"link": "#footer"
+  	}
+  ]
 }

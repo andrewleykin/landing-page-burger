@@ -1,0 +1,29 @@
+.nav__list
+	display flex
+
+.nav__item
+	&:last-child
+		.nav__link
+			&:after
+				display none
+.nav__link
+	color rgba(255,255,255,0.7)
+	text-transform uppercase
+	padding 15px
+	font-family mediumFont
+	display flex
+	position relative
+	@extend .trs
+	&:after 
+		content: '•'
+		display block
+		font-size 16px
+		position absolute
+		color white
+		top 50%
+		right 0
+		transform translateY(-50%)
+	&:hover
+		color rgba(255,255,255,1)
+		&:after
+			color white

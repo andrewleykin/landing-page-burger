@@ -8,7 +8,6 @@ module.exports = function() {
             }))
             .pipe($.gp.cheerio({
                 run: function($) {
-                    $('[fill]').removeAttr('fill');
                     $('[stroke]').removeAttr('stroke');
                     $('[style]').removeAttr('style');
                 },
@@ -22,6 +21,6 @@ module.exports = function() {
                     }
                 }
             }))
-            .pipe($.gulp.dest('./build/static/img/svg/'));
+            .pipe($.gulp.dest('./build/app/img/svg/'));
     });
 };
