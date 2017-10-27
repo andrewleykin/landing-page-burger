@@ -1,5 +1,5 @@
 // Функция для показа svg
 
-(function(){
+jQuery(document).ready(function($) {
 	svg4everybody();
-})();
+});

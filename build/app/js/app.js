@@ -1,3 +1,13 @@
+// Функция для показа svg
+
+jQuery(document).ready(function($) {
+	svg4everybody();
+});
+// Библиотека wow.js для анимации
+
+(function () {
+	new WOW().init();
+})();
 // Функция для навигации по меню
 
 (function () {
@@ -205,14 +215,4 @@
 		myCollection.add(myPlacemark).add(myPlacemark2);
 		myMap.geoObjects.add(myCollection);
 	}
-})();
-// Функция для показа svg
-
-(function(){
-	svg4everybody();
-})();
-// Библиотека wow.js для анимации
-
-(function () {
-	new WOW().init();
 })();
