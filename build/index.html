@@ -11,8 +11,19 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
     <body>
       <div class="wrapper">
+        <!-- Блок pagin-->
+        <div class="pagin">
+          <ul class="pagin__list">
+            <li class="pagin__item" data-section="#about"></li>
+            <li class="pagin__item" data-section="#burger"></li>
+            <li class="pagin__item" data-section="#team"></li>
+            <li class="pagin__item" data-section="#menu"></li>
+            <li class="pagin__item" data-section="#reviews"></li>
+            <li class="pagin__item" data-section="#contacts"></li>
+          </ul>
+        </div>
         <!-- Cекция header-->
-        <header class="header section">
+        <header class="section header" data-section="main">
           <div class="container">
             <div class="header__wrap">
               <div class="header__top">
@@ -25,12 +36,12 @@
                       <li class="nav__item"><a class="nav__link" href="#team">Команда</a></li>
                       <li class="nav__item"><a class="nav__link" href="#menu">Меню</a></li>
                       <li class="nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
-                      <li class="nav__item"><a class="nav__link" href="#footer">Конакты</a></li>
+                      <li class="nav__item"><a class="nav__link" href="#contacts">Конакты</a></li>
                     </ul>
                   </nav>
                 </div>
                 <div class="header__order">
-                  <button class="btn">Заказать</button>
+                  <button class="btn btn--order">Заказать</button>
                 </div>
               </div>
               <div class="header__middle">
@@ -50,7 +61,7 @@
           </div>
         </header>
         <!-- Cекция about-->
-        <section class="section about" id="about">
+        <section class="section about" data-section="about">
           <div class="container">
             <div class="wrap">
               <h2 class="title about__title">Мы лучшие</h2>
@@ -84,7 +95,7 @@
           </div>
         </section>
         <!-- Cекция burger-->
-        <section class="section burger" id="burger">
+        <section class="section burger" data-section="burger">
           <div class="container">
             <div class="wrap">
               <div class="burger__list">
@@ -140,7 +151,7 @@
                       <h2 class="title burger__title">Dark BEEF Burger</h2>
                       <p class="burger__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
                       <div class="burger__order"><span class="burger__cost">500</span><span class="burger__valuta">рублей</span>
-                        <button class="btn">Заказать</button>
+                        <button class="btn btn--order">Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -192,7 +203,7 @@
                       <h2 class="title burger__title">Burger Sandwich</h2>
                       <p class="burger__text">Описание для второго бургера, проверка слайдера и так далее</p>
                       <div class="burger__order"><span class="burger__cost">400</span><span class="burger__valuta">рублей</span>
-                        <button class="btn">Заказать</button>
+                        <button class="btn btn--order">Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -202,37 +213,43 @@
           </div>
         </section>
         <!-- Cекция team-->
-        <section class="section team" id="team">
-          <div class="container">
-            <div class="team__block">
-              <h2 class="title team__title">Команда</h2>
-              <div class="team__list">
-                <div class="team__item"><span class="team__name">Антон Пренкулов</span>
-                  <div class="team__info">
+        <section class="section team" data-section="team">
+          <div class="team__block">
+            <h2 class="title team__title">Команда</h2>
+            <div class="team__list">
+              <div class="team__item"><span class="team__name">Антон Пренкулов</span>
+                <div class="team__info">
+                  <div class="team__wrap">
                     <div class="team__photo"><img src="app/img/content/team/team__1.jpg" alt="Антон Пренкулов"></div>
                     <div class="team__descr"><span class="team__post">Директор</span>
                       <p class="tema__text">Самый главный тут чувак, лучше всех всё знает.</p>
                     </div>
                   </div>
                 </div>
-                <div class="team__item"><span class="team__name">Ричард джеймс</span>
-                  <div class="team__info">
+              </div>
+              <div class="team__item"><span class="team__name">Ричард джеймс</span>
+                <div class="team__info">
+                  <div class="team__wrap">
                     <div class="team__photo"><img src="app/img/content/team/team__2.jpg" alt="Ричард джеймс"></div>
                     <div class="team__descr"><span class="team__post">Оператор</span>
                       <p class="tema__text">С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
                     </div>
                   </div>
                 </div>
-                <div class="team__item"><span class="team__name">Джейк финн</span>
-                  <div class="team__info">
+              </div>
+              <div class="team__item"><span class="team__name">Джейк финн</span>
+                <div class="team__info">
+                  <div class="team__wrap">
                     <div class="team__photo"><img src="app/img/content/team/team__3.jpg" alt="Джейк финн"></div>
                     <div class="team__descr"><span class="team__post">Курьер</span>
                       <p class="tema__text">Расскажет анекдот, когда к вам придёт. И принесёт вам сочный бургер.</p>
                     </div>
                   </div>
                 </div>
-                <div class="team__item"><span class="team__name">Николай иванов</span>
-                  <div class="team__info">
+              </div>
+              <div class="team__item"><span class="team__name">Николай иванов</span>
+                <div class="team__info">
+                  <div class="team__wrap">
                     <div class="team__photo"><img src="app/img/content/team/team__4.jpg" alt="Николай иванов"></div>
                     <div class="team__descr"><span class="team__post">Повар</span>
                       <p class="tema__text">Приготовит самые отменные булочки в стране.</p>
@@ -244,11 +261,197 @@
           </div>
         </section>
         <!-- Cекция menu-->
+        <section class="section menu" data-section="menu">
+          <div class="menu__wrap">
+            <h2 class="title menu__title">Меню</h2>
+            <div class="menu__list">
+              <div class="menu__item menu__item--1"><span class="menu__name">Для мясоедов</span>
+                <div class="menu__info">
+                  <p class="menu__text">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
+                </div>
+              </div>
+              <div class="menu__item menu__item--2"><span class="menu__name">Вегетарианское</span>
+                <div class="menu__info">
+                  <p class="menu__text">Этот текст для меню Вегетарианское. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
+                </div>
+              </div>
+              <div class="menu__item menu__item--3"><span class="menu__name">Диетическое</span>
+                <div class="menu__info">
+                  <p class="menu__text">Этот текст для меню Диетическое. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- Cекция reviews-->
+        <section class="section reviews" data-section="reviews">
+          <div class="reviews__list">
+            <div class="reviews__item reviews__item--1">
+              <div class="reviews__info"><span class="reviews__name">Саша Львович</span>
+                <p class="reviews__text">Саша пишет что ему всё понравилось, и он очень рад поесть у нас. И текст уж очень большой, так что нажми на кнопку подробнее, и тебе всё станет сразу ясно.</p>
+                <button class="btn btn--dark">Подробнее</button>
+              </div>
+            </div>
+            <div class="reviews__item reviews__item--2">
+              <div class="reviews__info"><span class="reviews__name">Конастантин Спилберг</span>
+                <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                <button class="btn btn--dark">Подробнее</button>
+              </div>
+            </div>
+            <div class="reviews__item reviews__item--3">
+              <div class="reviews__info"><span class="reviews__name">Анастасия Львовна</span>
+                <p class="reviews__text">Анастасия пишет что ей всё понравилось, и она очень рада поесть у нас. И текст уж очень большой, так что нажми на кнопку подробнее, и тебе всё станет сразу ясно.</p>
+                <button class="btn btn--dark">Подробнее</button>
+              </div>
+            </div>
+            <div class="reviews__item reviews__item--4">
+              <div class="reviews__info"><span class="reviews__name">Прокудий Левый</span>
+                <p class="reviews__text">Прокудий пишет что ему всё понравилось, и он очень рад поесть у нас. И текст уж очень большой, так что нажми на кнопку подробнее, и тебе всё станет сразу ясно.</p>
+                <button class="btn btn--dark">Подробнее</button>
+              </div>
+            </div>
+            <div class="reviews__item reviews__item--5">
+              <div class="reviews__info"><span class="reviews__name">Златан Мрамович</span>
+                <p class="reviews__text">Златан пишет что ему всё понравилось, и он очень рад поесть у нас. И текст уж очень большой, так что нажми на кнопку подробнее, и тебе всё станет сразу ясно.</p>
+                <button class="btn btn--dark">Подробнее</button>
+              </div>
+            </div>
+            <div class="reviews__item reviews__item--6">
+              <div class="reviews__info"><span class="reviews__name">Ибрагима Дурышина</span>
+                <p class="reviews__text">Ибрагима пишет что ей всё понравилось, и она очень рада поесть у нас. И текст уж очень большой, так что нажми на кнопку подробнее, и тебе всё станет сразу ясно.</p>
+                <button class="btn btn--dark">Подробнее</button>
+              </div>
+            </div>
+            <div class="reviews__item reviews__item--7">
+              <div class="reviews__info"><span class="reviews__name">Марк Ляпольский</span>
+                <p class="reviews__text">Марк пишет что ему всё понравилось, и он очень рад поесть у нас. И текст уж очень большой, так что нажми на кнопку подробнее, и тебе всё станет сразу ясно.</p>
+                <button class="btn btn--dark">Подробнее</button>
+              </div>
+            </div>
+            <div class="reviews__item reviews__item--8">
+              <div class="reviews__info"><span class="reviews__name">Брайс Новиков</span>
+                <p class="reviews__text">Брайс пишет что ему всё понравилось, и он очень рад поесть у нас. И текст уж очень большой, так что нажми на кнопку подробнее, и тебе всё станет сразу ясно.</p>
+                <button class="btn btn--dark">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- Cекция order-->
+        <section class="section order" data-section="order">
+          <div class="container">
+            <div class="wrap">
+              <h2 class="title order__title">Закажите доставку</h2>
+              <form class="order__form" action="#" method="POST">
+                <div class="order__section">
+                  <div class="order__row">
+                    <div class="order__block">
+                      <label class="order__label" for="name">Имя</label>
+                      <input class="order__input  " type="text" name="name" id="name" required>
+                    </div>
+                    <div class="order__block">
+                      <label class="order__label" for="phone">Телефон</label>
+                      <input class="order__input  " type="text" name="phone" id="phone" required>
+                    </div>
+                  </div>
+                  <div class="order__row">
+                    <div class="order__block">
+                      <label class="order__label" for="stret">Улица</label>
+                      <input class="order__input  " type="text" name="stret" id="stret" required>
+                    </div>
+                  </div>
+                  <div class="order__row">
+                    <div class="order__block">
+                      <label class="order__label" for="home">Дом</label>
+                      <input class="order__input  " type="text" name="home" id="home" required>
+                    </div>
+                    <div class="order__block">
+                      <label class="order__label" for="corpus">Корпус</label>
+                      <input class="order__input  " type="text" name="corpus" id="corpus" required>
+                    </div>
+                    <div class="order__block">
+                      <label class="order__label" for="apartment">Квартира</label>
+                      <input class="order__input  " type="text" name="apartment" id="apartment" required>
+                    </div>
+                    <div class="order__block">
+                      <label class="order__label" for="floor">Этаж</label>
+                      <input class="order__input  " type="text" name="floor" id="floor" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="order__section">
+                  <div class="order__row">
+                    <div class="order__block">
+                      <label class="order__label" for="comments">Комментарий</label>
+                      <textarea class="order__textarea" name="comments" id="comments"></textarea>
+                    </div>
+                  </div>
+                  <div class="order__row">
+                    <div class="order__block order__block--small">
+                      <input class="order__input order__input--radio" type="radio" name="radio" id="radio1">
+                      <label class="order__label" for="radio1">Потребуется сдача</label>
+                    </div>
+                    <div class="order__block order__block--small">
+                      <input class="order__input order__input--radio" type="radio" name="radio" id="radio2">
+                      <label class="order__label" for="radio2">Оплата по карте</label>
+                    </div>
+                  </div>
+                  <div class="order__row">
+                    <div class="order__block order__block--small">
+                      <input class="order__input order__input--checkbox" type="checkbox" name="checkbox" id="checkbox">
+                      <label class="order__label" for="checkbox">Не перезванивать</label>
+                    </div>
+                  </div>
+                  <div class="order__row">
+                    <div class="order__block order__block--small">
+                      <input class="order__btn btn" type="submit" value="Заказать" id="submit">
+                    </div>
+                    <div class="order__block order__block--small">
+                      <input class="order__btn order__btn--reset" type="reset" value="Очистить" id="reset">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
         <!-- Cекция footer-->
+        <footer class="section footer" data-section="contacts">
+          <div class="footer__map" id="map">
+            <div class="footer__wrap">
+              <div class="container">
+                <div class="footer__row">
+                  <div class="footer__block"><span class="footer__addres">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</span><a class="footer__phone" href="+78123771377">
+                      <svg class="icon icon-phone ">
+                        <use xlink:href="/app/img/svg/symbol/sprite.svg#phone"></use>
+                      </svg><span>+7 (812) 377-13-77</span></a></div>
+                  <div class="footer__social social">
+                    <ul class="social__list">
+                      <li class="social__item"><a class="social__link" href="#">
+                          <svg class="icon icon-vk ">
+                            <use xlink:href="/app/img/svg/symbol/sprite.svg#vk"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a class="social__link" href="#">
+                          <svg class="icon icon-fb ">
+                            <use xlink:href="/app/img/svg/symbol/sprite.svg#fb"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a class="social__link" href="#">
+                          <svg class="icon icon-inst ">
+                            <use xlink:href="/app/img/svg/symbol/sprite.svg#inst"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a class="social__link" href="#">
+                          <svg class="icon icon-twitter ">
+                            <use xlink:href="/app/img/svg/symbol/sprite.svg#twitter"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
       <script src="app/js/libs.min.js"></script>
+      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
       <script src="app/js/app.js"></script>
     </body>
   </head>

@@ -1,0 +1,42 @@
+.footer__map
+	position relative
+	height 100%
+	z-index 1
+
+.footer__wrap
+	position absolute
+	left 0
+	right 0
+	bottom 0
+	z-index 5
+	background rgba(darkColor, .9)
+	padding 10px 0
+
+.footer__row
+	display flex
+	justify-content space-between
+
+.footer__block
+	color white
+
+.footer__addres
+	display block
+	font-family lightFont 
+	margin-bottom 10px
+
+.footer__phone
+	display flex
+	.icon
+		size(15px, 18px)
+		margin-right 5px
+	span
+		color accentColor
+		font-family boldFont
+		trs()
+		&:hover
+			color darken(accentColor, 20%)
+
+.social__list
+	display flex
+	.icon
+		size(15px)

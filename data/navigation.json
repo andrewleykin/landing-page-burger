@@ -22,7 +22,33 @@
   	},
   	{
   		"text": "Конакты",
-  		"link": "#footer"
+  		"link": "#contacts"
   	}
+  ],
+  "pagin": [
+    {
+      "link": "#main"
+    },
+    {
+      "link": "#about"
+    },
+    {
+      "link": "#burger"
+    },
+    {
+      "link": "#team"
+    },
+    {
+      "link": "#menu"
+    },
+    {
+      "link": "#reviews"
+    },
+    {
+      "link": "#order"
+    },
+    {
+      "link": "#contacts"
+    }
   ]
 }

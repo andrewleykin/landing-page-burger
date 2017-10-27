@@ -8,8 +8,16 @@
 	background accentColor
 	color white
 	cursor pointer
-	@extend .trs
+	trs()
 	&:hover
 		background hoverColor
 	&:active
 		background darken(hoverColor, 20%)
+
+
+.btn--dark
+	background darkColor 
+	&:hover
+		background lighten(darkColor, 20%)
+	&:active
+		background darken(darkColor, 20%)
