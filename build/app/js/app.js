@@ -3,11 +3,6 @@
 jQuery(document).ready(function($) {
 	svg4everybody();
 });
-// Библиотека wow.js для анимации
-
-(function () {
-	new WOW().init();
-})();
 // Функция для навигации по меню
 
 (function () {
