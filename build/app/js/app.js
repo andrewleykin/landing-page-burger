@@ -206,9 +206,11 @@
 		myMap.geoObjects.add(myCollection);
 	}
 })();
-$(document).ready(function () {
-    svg4everybody({});
-});
+// Функция для показа svg
+
+(function(){
+	svg4everybody();
+})();
 // Библиотека wow.js для анимации
 
 (function () {
