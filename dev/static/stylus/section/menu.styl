@@ -1,0 +1,56 @@
+.menu
+	background url(../img/content/menu/menu__bg.jpg) center center no-repeat
+	background-size cover
+
+.menu__wrap
+	display flex
+	justify-content space-between
+	color white
+	height 100%
+
+.menu__title
+	padding-left rem(210)
+	padding-top rem(110)
+
+.menu__list
+	display flex
+
+.menu__item
+	display flex
+	width 85px
+	overflow hidden
+	trs()
+
+.menu__name
+	transform rotate(180deg)
+	writing-mode: vertical-lr;
+	text-align center
+	font-family gagalinFont
+	letter-spacing 2px
+	font-size 40px
+	padding 0 25px
+	position relative
+	&:before
+		content ""
+		display block
+		absolute-all(0)
+		background rgba(darkColor, .7)
+		z-index -1
+
+
+.menu__text
+	padding rem(65) rem(35) 0
+	width 540px
+	max-width 540px
+	font-size 14px
+	background rgba(darkColor, .9) 
+	line-height 24px
+	height 100%
+
+// background
+
+for num in (1..3)
+	.menu__item--{num}
+		.menu__name
+			background url('../img/content/menu/menu__' + num + '.jpg') center no-repeat
+			background-size cover

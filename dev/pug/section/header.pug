@@ -1,0 +1,19 @@
+header.section.header(data-section="main")
+	.container
+		.header__wrap
+			.header__top
+				.header__logo
+					img(src="app/img/general/logo.png" alt="Мистер Бургер")
+				.header__nav
+					include ../modules/nav
+				.header__order
+					button.btn.btn--order= content.btn
+			.header__middle
+				.header__burger
+					img(src="app/img/content/header/header__burger.png" alt="Бургер")
+				.header__text
+					h2.title.header__title= content.header.title
+					span.header__subtitle= content.header.subtitle
+			.header__bottom
+				.header__arrow
+					+icon('arrow-scroll')

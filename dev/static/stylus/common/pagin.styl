@@ -1,0 +1,55 @@
+.pagin
+	position fixed
+	top 80px
+	right 50px
+	z-index 999
+
+.pagin__item
+	size(20px)
+	position relative
+	cursor pointer
+	trs()
+	&:after
+		content "";
+		position absolute
+		absolute-center()
+		size(8px)
+		background white
+		border-radius 50%
+	&:hover
+		&:after
+			background darken(white, 20%)
+
+.pagin__item--active
+	&:before
+		content "";
+		position absolute
+		absolute-center()
+		size(16px)
+		background transparent
+		border-radius 50%
+		border 1px solid white
+	&:hover
+		&:after
+			background white
+
+// .scroll__nav {
+// 			position: fixed;
+// 			color: white;
+// 			right: 50px;
+// 			.scroll__link {
+// 				display: block;
+//     			border-radius: 50%;
+//     			background-color: white;
+//     			width: 6px;
+//     			height: 6px;
+//     			margin-top: 15px;
+//     			color: white;
+//     			position: relative;
+// 			}
+// 			.scroll_active {
+// 				box-shadow: 0 0 0 3px black, 0 0 0 4.5px #fff;
+// 				border-radius: 3px;
+				
+// 			}
+// 		}

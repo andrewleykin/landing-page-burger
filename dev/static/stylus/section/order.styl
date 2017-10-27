@@ -1,0 +1,111 @@
+.order
+	background url(../img/content/order/order__bg.jpg) center center no-repeat
+	background-size cover
+	padding-top rem(90) 
+
+.order__title
+	color lightColor
+	text-align center
+	margin-bottom rem(90)
+
+.order__form
+	display flex
+
+.order__section
+	width 50%
+
+.order__row
+	display flex
+
+.order__label
+	display block
+	color white
+	margin-bottom 10px
+	font-family lightFont
+	cursor pointer
+
+.order__block
+	flex auto
+	margin-bottom 20px
+
+.order__block--small
+	width auto
+	flex none
+	display flex
+	margin-right 20px
+	.order__label
+		width 100%
+		white-space nowrap
+
+.order__input
+	width calc(100% - 20px)
+	height 35px
+	border-radius 5px
+	padding 0 15px
+
+.order__textarea
+	height 109px
+	width 100%
+	border-radius 5px
+	padding 15px
+
+.order__input--radio, .order__input--checkbox
+	&~.order__label
+		position relative
+		padding-left 25px
+		&:before, &:after
+			content ''
+			display block
+			position absolute
+		&:after
+			opacity 0
+			trs()
+
+
+.order__input--radio
+	&~.order__label
+		&:before
+			size(15px)
+			border-radius 50%
+			background white
+			left 0
+			top -1px
+		&:after
+			size(8px)
+			background accentColor
+			border-radius 50%
+			left 3.5px
+			top 2.5px
+
+.order__input--checkbox
+	&~.order__label
+		&:before
+			size(17px)
+			background white
+			left 0
+			top -2px
+		&:after
+			size(11px)
+			background url(../img/general/check.png) center no-repeat
+			background-size cover
+			left 3.5px
+			top 1.5px
+
+.order__input--radio:checked, 
+.order__input--checkbox:checked
+	&~.order__label:after
+		opacity 1
+
+
+.order__btn--reset
+	background none
+	color white
+	font-size 14px
+	font-family lightFont
+	cursor pointer
+	padding 0 10px
+	margin-left -10px
+	border-radius 5px
+	trs()
+	&:hover
+		background accentColor 

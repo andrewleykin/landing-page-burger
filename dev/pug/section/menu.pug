@@ -1,0 +1,9 @@
+section.section.menu(data-section="menu")
+	.menu__wrap
+		h2.title.menu__title= content.menu.title
+		.menu__list
+			each menu in content.menu.list
+				.menu__item(class= menu["class"])
+					span.menu__name= menu["name"]
+					.menu__info
+						p.menu__text= menu["text"]

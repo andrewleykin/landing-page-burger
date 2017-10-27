@@ -1,0 +1,84 @@
+.burger
+	background-image linear-gradient(to bottom, lightColor, lightHelpColor 48%, lightColor 74%)
+	padding-top 90px
+
+.burger__list
+	position relative
+
+.burger__wrap
+	display flex
+
+.burger__left
+	position relative
+	width 50%
+	margin-right 20px
+	padding-top 70px
+	padding-bottom 30px
+
+.burger__descr
+	position absolute
+	top 0
+	left 0
+	&:hover
+		.burger__composition
+			visibility visible
+
+.burger__composition
+	position absolute
+	top 0
+	left 90px
+	visibility hidden
+	trs()
+	z-index 5
+
+.burger__right
+	width 50%
+	color white
+
+.burger__title
+	margin-bottom 50px
+
+.burger__text
+	font-family lightFont
+	line-height 1.5
+	margin-bottom 40px
+
+.burger__order
+	display flex
+	align-items baseline
+	font-family gagalinFont 
+
+.burger__cost
+	font-size 72px
+	color accentColor
+	display block
+	margin-right 10px
+
+.burger__valuta
+	font-size 30px
+	color accentColor
+	display block
+	margin-right 30px
+
+
+// arrow
+
+.burger__list
+	.slick-arrow
+		font-size 0
+		background none
+		cursor pointer
+		position absolute
+		top 50%
+		transform translateY(-50%)
+		&:after
+			content ""
+			display block
+			size(22px,40px)
+			background url("../img/general/arrow-left.png") center center no-repeat
+			 background-size cover
+		&.slick-prev
+			right calc(100%+10px)
+		&.slick-next
+			left calc(100%+10px)
+			transform rotate(180deg)

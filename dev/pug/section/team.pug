@@ -1,0 +1,14 @@
+section.section.team(data-section="team")
+	.team__block
+		h2.title.team__title= content.team.title
+		.team__list
+			each team in content.team.list
+				.team__item
+					span.team__name= team["name"]
+					.team__info
+						.team__wrap
+							.team__photo
+								img(src="app/img/content/team/" + team["photo"] + ".jpg" alt= team["name"])
+							.team__descr
+								span.team__post= team["post"]
+								p.tema__text= team["text"]

@@ -1,0 +1,5 @@
+nav.nav
+	ul.nav__list
+		each object in nav.mainNav
+			li.nav__item
+				a.nav__link(href= object["link"])= object["text"]

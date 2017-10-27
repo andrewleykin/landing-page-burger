@@ -1,0 +1,40 @@
+.reviews__list
+	display flex
+	flex-wrap: wrap
+
+.reviews__item
+	width 25%
+	height 50vh
+	min-height 325px
+	color white
+
+.reviews__info
+	background rgba(darkColor, 0.7)
+	size(100%)
+	display flex
+	flex-direction column
+	justify-content center
+	padding rem(50) rem(20)
+	opacity 0
+	trs()
+	&:hover
+		opacity 1
+
+.reviews__name
+	display block
+	font-size 14px
+	font-family gagalinFont
+	letter-spacing 2px
+	margin-bottom rem(30)
+
+.reviews__text
+	line-height 24px
+	font-family lightFont 
+	margin-bottom rem(20)
+
+// background
+
+for num in (1..8)
+	.reviews__item--{num}
+		background url('../img/content/reviews/reviews__' + num + '.jpg') center no-repeat
+		background-size cover

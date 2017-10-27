@@ -1,0 +1,69 @@
+.team
+	background url(../img/content/team/team__bg.jpg) center center no-repeat
+	background-size cover
+
+.team__block
+	margin-left auto
+	width 50%
+	height 100%
+	background rgba(darkColor, .9)
+	display flex
+	flex-direction column
+	justify-content center
+	padding-top rem(90)
+	padding-left rem(80)
+
+.team__title
+	color lightColor
+	margin-bottom rem(90) 
+
+.team__item
+	margin-bottom rem(40) 
+
+.team__item--active
+	.team__name
+		&:before
+			transform rotate(180deg)
+			margin-bottom 5px
+
+.team__name
+	font-size 14px
+	font-family gagalinFont
+	color white
+	letter-spacing 2px
+	display block
+	margin-bottom rem(20)
+	display flex
+	align-items center
+	cursor pointer
+	&:before
+		content ''
+		display block
+		border 6px solid transparent
+		border-top-color lightColor
+		margin-right 10px
+		margin-bottom -7px
+
+
+.team__info
+	display none
+
+.team__wrap
+	display flex
+	color white
+
+.team__photo
+	size(100px)
+	overflow hidden
+	border-radius 50%
+	margin-right rem(20)
+
+.team__post
+	display block
+	font-family boldFont
+	margin-bottom rem(25)
+
+.tema__text
+	max-width 210px
+	line-height 24px
+	font-family lightFont

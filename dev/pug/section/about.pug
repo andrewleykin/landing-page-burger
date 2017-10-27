@@ -1,0 +1,11 @@
+section.section.about(data-section="about")
+	.container
+		.wrap
+			h2.title.about__title= content.about.title
+			.about__list
+				each object in content.about.list
+					.about__item
+						.about__icon
+							+icon(object["icon"])
+						span.about__name= object["title"]
+						p.about__text= object["text"]

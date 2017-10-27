@@ -1,0 +1,30 @@
+section.section.burger(data-section="burger")
+	.container
+		.wrap
+			.burger__list
+				each burger in content.burger.list
+					.burger__item
+						.burger__wrap
+							.burger__left
+								.burger__descr.descr
+									+icon(content.burger.descr.icon)
+									span.descr__text= content.burger.descr.text
+									.burger__composition.composition
+										.composition__list
+											each composition in burger["composition"]
+												.composition__item
+													+icon(composition["icon"])
+													span.composition__name= composition["text"]
+													span.composition__mass= composition["mass"]
+								img.burger__img(src="app/img/content/burger/" + burger["image"] + ".png" alt= burger["title"])
+								.burger__kkal.kkal
+									+icon('kkal')
+									span.kkal__num= burger["kkal"]
+									span.kkal__text= content.burger.kkalText
+							.burger__right
+								h2.title.burger__title= burger["title"]
+								p.burger__text= burger["text"]
+								.burger__order
+									span.burger__cost= burger["cost"]
+									span.burger__valuta= content.burger.valuta
+									button.btn.btn--order= content.btn

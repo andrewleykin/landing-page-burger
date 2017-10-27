@@ -1,0 +1,8 @@
+section.section.reviews(data-section="reviews")
+	.reviews__list
+		each reviews in content.reviews
+			.reviews__item(class= reviews["class"])
+				.reviews__info
+					span.reviews__name= reviews["name"]
+					p.reviews__text= reviews["text"]
+					button.btn.btn--dark= content.moreBtn

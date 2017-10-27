@@ -1,0 +1,17 @@
+footer.section.footer(data-section="contacts")
+	.footer__map#map
+		.footer__wrap
+			.container
+				.footer__row
+					.footer__block
+						span.footer__addres= content.footer.addres
+						a.footer__phone(href= content.footer.phone.link)
+							+icon(content.footer.phone.icon)
+							span= content.footer.phone.text
+					.footer__social.social
+						ul.social__list
+							each social in content.footer.list
+								li.social__item
+									a.social__link(href="#")
+										+icon(social["icon"])
+

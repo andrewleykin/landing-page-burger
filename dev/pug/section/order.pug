@@ -1,0 +1,26 @@
+section.section.order(data-section="order")
+	.container
+		.wrap
+			h2.title.order__title= content.order.title
+			form.order__form(action="#" method="POST")
+				each form in content.order.form
+					.order__section
+						each row in form
+							.order__row
+								each item in row
+									- if (item["mode"] == 'input') {
+										.order__block
+											label.order__label(for= item["id"])= item["label"]
+											input.order__input(type= item["type"], name= item["name"], id= item["id"], class= item["class"] required)
+									- } else if (item["mode"] == 'textarea') {
+										.order__block
+											label.order__label(for= item["id"])= item["label"]
+											textarea.order__textarea( name= item["name"], id= item["id"])
+									- } else if (item["mode"] == 'btn'){
+										.order__block.order__block--small
+											input.order__btn(type= item["type"], value= item["value"], id= item["id"], class= item["class"])
+									- } else {
+										.order__block.order__block--small
+											input.order__input(type= item["type"], name= item["name"], value= item["value"], id= item["id"], class= item["class"])
+											label.order__label(for= item["id"])= item["label"]
+									- }
