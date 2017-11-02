@@ -1,74 +1,135 @@
-// Функция для навигации по меню
+// Движение колесика мыши
 
-(function () {
+(function(){
 
-	var link = $('.nav__link'),
-		item = $('.section'),
-		btn = $('.btn--order'),
-		href = window.location.href,
+	var screen = 0,
+		inscroll = false;
+		container = $('.maincontent'),
 		section = $('.section'),
+		activeSection = 'section--active',
+		link = $('.nav__link'),
+		btn = $('.btn--order'),
 		pagin = $('.pagin__item'),
 		activePagin = 'pagin__item--active';
 
+	$('.section:first-child').addClass(activeSection);	// первой секции активный класс
+	pagin.first().addClass(activePagin);				// первой пагинации активный класс
 
-		pagin.first().addClass(activePagin);
-		if(window.location.hash) {
-			showSection(window.location.hash, false);
+	// функция смена экрана
+	var screenSwitcher = function (index) {
+
+		screen = index;
+		if(!inscroll) {
+			inscroll = true;
+		} else {
+			return
 		}
 
-	$(window).scroll(function() {
-		checkDistance()
+		var position = (-screen * 100) + '%',
+			direction = section.eq(screen).data('section');
+
+		section.eq(screen).addClass(activeSection).siblings().removeClass(activeSection);
+		pagin.eq(screen).addClass(activePagin).siblings().removeClass(activePagin);
+		container.css('top', position);
+		window.location.hash = '#' + direction;
+
+		setTimeout(function(){
+			inscroll = false;
+		},1300);
+	}
+
+	// при движения колесика мыши
+	$('body').on('mousewheel', function(event) {
+
+		var activePage = section.filter('.' + activeSection);
+
+		if(!inscroll) {
+			if(event.deltaY > 0) {
+				if(screen > 0) {
+					screen--;
+				}
+			} else {
+				if(screen < section.length-1) {
+					screen++;
+				}
+			}
+		}
+
+		screenSwitcher(screen);
 	});
 
+	// нажатие на стрелку
+	$('.header__arrow').click(function() {
+		screenSwitcher(1);
+	});
+
+	// при нажатии на меню
 	link.click(function(e) {
 		e.preventDefault();
 
-		showSection($(this).attr('href'), true);
+		var index = $(this).closest('.nav__item').index() + 1;
+
+		if(index==6) {
+			index = 7;
+		}
+		screenSwitcher(index);
 	});
 
+	// при нажатии на кнопку
 	btn.click(function(e) {
 		e.preventDefault();
 
-		showSection('#order', true);
+		screenSwitcher(6);
 	});
 
+	// при нажатии на пагинацию
 	pagin.click(function(e) {
 		e.preventDefault();
 
-		showSection($(this).data('section'), true);
+		var index = $(this).index();
+
+		screenSwitcher(index);
 	});
 
-	function showSection(article, isAnimate) {
-		var direction = article.replace(/#/, ''),
-			reqSection = item.filter('[data-section="' + direction + '"]'),
-			reqSectionPos = reqSection.offset().top;
+	// при заходе с хэшом
+	if(window.location.hash) {
+		var direction = window.location.hash.replace(/#/, ''),
+			index = section.filter('[data-section="' + direction + '"]').index();
 
-		if (isAnimate) {
-			$('body, html').animate({scrollTop: reqSectionPos}, 1000);
-		} else {
-			$('body, html').scrollTop(reqSectionPos);
-		}
-
-		window.location.hash = href + '#' + direction;
+			screenSwitcher(index);
 	}
 
-	var checkDistance = function() {
-		for(i=0; i<=section.length-1;i++) {
-			var $this = section.eq(i),
-				topEdge = $this.offset().top - 200,
-				bottomEdge = topEdge + $this.height(),
-				wScroll = $(window).scrollTop();
-
-				if(topEdge < wScroll && bottomEdge > wScroll) {
-					var currentId = $this.data('section'),
-						reqPagin = pagin.filter('[data-section="#' + currentId + '"]');
-
-					reqPagin.addClass(activePagin).siblings().removeClass(activePagin);
-
-					window.location.hash = currentId;
+	// при нажатии на клавиатуру
+	$(document).on('keydown', (e) => {
+		if(!inscroll) {
+			if(e.keyCode == 38) {
+				if(screen > 0) {
+					screen--;
 				}
+			} else if (e.keyCode == 40){
+				if(screen < section.length-1) {
+					screen++;
+				}
+			}
 		}
-	}
+		screenSwitcher(screen);
+	});
+
+	// при свайпе
+	$('body').swipe({
+		swipeUp:function(event) {
+			if(!inscroll && screen < section.length-1) {
+				screen++;
+				screenSwitcher(screen);
+			}
+		},
+		swipeDown:function(event) {
+			if(!inscroll && screen > 0) {
+				screen--;
+				screenSwitcher(screen);
+			}
+		}
+	});
 
 })();
 
@@ -82,18 +143,6 @@
 		arrows: true
 	});
 })();
-
-// Скроллвниз
-
-(function(){
-	$('.header__arrow').click(function() {
-		var height = $('.header').outerHeight();
-
-		$('body, html').animate({scrollTop: height}, 1000);
-	});
-})();
-
-
 
 // аккордеон
 
@@ -159,7 +208,7 @@
 
 })();
 
-// Карта Ynadex
+// Карта Yandex
 
 (function(){
 	ymaps.ready(init);
